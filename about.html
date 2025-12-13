@@ -3,72 +3,120 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — Tax Solutions</title>
+  <title data-en="About — M & E Finances" data-es="Acerca de — M & E Finanzas">About — M & E Finances</title>
   <style>
-    :root{--accent:#0a84ff;--accent-green:#216e4a;--page-bg:#f6f7f8;--brightness:0.92;--text:#0b1220;--muted:#394152}
+    :root{--accent:#d4a574;--accent-gold:#d4a574;--page-bg:#e8dcc8;--brightness:0.96;--text:#1a3a52;--muted:#5a6b78}
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--text);line-height:1.6;background:var(--page-bg);filter:brightness(var(--brightness))}
     .container{max-width:980px;margin:0 auto;padding:28px}
-    header{background:#f0fbf5;padding:18px 0;border-bottom:1px solid rgba(33,110,74,0.12)}
-    .logo{font-weight:600}
-    nav ul{display:flex;gap:18px;list-style:none}
-    nav a{text-decoration:none;color:var(--text);font-weight:500}
-    nav a:hover{color:var(--accent)}
+    header{background:#1a3a52;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,0.1);color:#fff;margin-left:calc(-50vw + 50%);margin-right:calc(-50vw + 50%);width:100vw}
+    header > div{display:flex;justify-content:space-between;align-items:center;max-width:980px;margin:0 auto}
+    .logo{font-weight:600;font-size:1.4rem;color:#fff}
+    nav{display:flex;justify-content:flex-end;align-items:center;gap:24px}
+    nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+    nav a{text-decoration:none;color:#fff;font-weight:500}
+    nav a:hover{color:#d4a574}
     .hero{padding:48px 0 8px}
     h1{font-size:1.6rem;margin-bottom:8px}
     .lead{color:var(--muted)}
-    .two-col{display:grid;grid-template-columns:1fr 380px;gap:30px;margin-top:20px;align-items:start}
-    .panel{background:#ffffff;padding:18px;border-radius:10px;border:1px solid rgba(11,18,32,0.035);box-shadow:0 8px 22px rgba(8,15,25,0.03);border-top:4px solid rgba(33,110,74,0.12)}
-    footer{padding:36px 0;border-top:1px solid rgba(33,110,74,0.12);background:#f0fbf5;color:var(--text);text-align:center}
+    .two-col{display:grid;grid-template-columns:1fr;gap:30px;margin-top:20px;align-items:center;max-width:700px;margin-left:auto;margin-right:auto}
+    .panel{background:#ffffff;padding:18px;border-radius:10px;border:1px solid rgba(26,58,82,0.05);box-shadow:0 8px 22px rgba(26,58,82,0.04);border-top:4px solid rgba(212,165,116,0.2)}
+    footer{padding:36px 0;border-top:4px solid #d4a574;background:#1a3a52;color:#fff;text-align:center;margin-left:-28px;margin-right:-28px;padding-left:28px;padding-right:28px}
+    .lang-toggle{background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.3);padding:0.4rem 0.8rem;border-radius:6px;cursor:pointer;font-size:0.85rem;font-weight:500;transition:background 0.2s}
+    .lang-toggle:hover{background:rgba(255,255,255,0.2)}
+    .lang-toggle.active{background:#d4a574}
   </style>
 </head>
 <body>
   <header>
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center">
-      <div class="logo">Tax Solutions</div>
+    <div>
+      <div class="logo">M & E Finances</div>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+          <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+          <li><a href="about.html" data-en="About" data-es="Acerca de">About</a></li>
+          <li><a href="testimonials.html" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
+          <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
         </ul>
+        <button class="lang-toggle" id="langToggle">ES</button>
       </nav>
     </div>
   </header>
 
   <main class="container">
     <section class="hero">
-      <h1>About Tax Solutions</h1>
-      <p class="lead">We are a team of certified tax professionals with over 20 years of combined experience helping businesses and individuals navigate tax challenges, stay compliant, and grow their financial position.</p>
+      <h1 data-en="About Me" data-es="Sobre Mí">About Me</h1>
+      <p class="lead" data-en="Hi, I'm Marvyn Burrion! I'm passionate about helping individuals and small businesses take control of their finances. With experience in tax preparation, bookkeeping, and payroll management, I provide accurate, reliable, and personalized financial services that save you time and reduce stress." data-es="¡Hola, soy Marvyn Burrion! Me apasiona ayudar a individuos y pequeños negocios a tomar control de sus finanzas. Con experiencia en preparación de impuestos, contabilidad y gestión de nómina, proporcionó servicios financieros precisos, confiables y personalizados que le ahorran tiempo y reducen estrés.">Hi, I'm Marvyn Burrion! I'm passionate about helping individuals and small businesses take control of their finances. With experience in tax preparation, bookkeeping, and payroll management, I provide accurate, reliable, and personalized financial services that save you time and reduce stress.</p>
     </section>
 
     <section class="two-col">
-      <div>
-        <div class="panel">
-          <h2 style="margin-bottom:8px">Our Approach</h2>
-          <p style="color:var(--muted)">We combine deep tax knowledge with clear communication. Our approach is proactive — we look ahead to find opportunities while protecting you from risks.</p>
-        </div>
-
-        <div class="panel" style="margin-top:18px">
-          <h2 style="margin-bottom:8px">Credentials</h2>
-          <p style="color:var(--muted)">Our team includes CPAs and enrolled agents who keep current with tax law changes and best practices.</p>
-        </div>
+      <div class="panel">
+        <h2 style="margin-bottom:12px" data-en="My Philosophy" data-es="Mi Filosofía">My Philosophy</h2>
+        <p style="color:var(--muted)" data-en="I believe that every client deserves clear guidance and a trusted partner who cares about their financial success. My goal is to simplify the complex world of numbers so you can focus on what matters most—whether that's growing your business, enjoying life, or planning for the future." data-es="Creo que cada cliente merece orientación clara y un socio de confianza que se preocupe por su éxito financiero. Mi objetivo es simplificar el complejo mundo de los números para que pueda enfocarse en lo que más importa, ya sea hacer crecer su negocio, disfrutar la vida o planificar el futuro.">I believe that every client deserves clear guidance and a trusted partner who cares about their financial success. My goal is to simplify the complex world of numbers so you can focus on what matters most—whether that's growing your business, enjoying life, or planning for the future.</p>
       </div>
 
-      <aside class="panel">
-        <h3 style="margin-bottom:8px">Schedule a Consultation</h3>
-        <p style="color:var(--muted)">Ready to discuss your tax needs? <a href="contact.html" style="color:var(--accent-green);text-decoration:none">Contact us</a> to book a meeting.</p>
-      </aside>
+      <div class="panel">
+        <h2 style="margin-bottom:12px" data-en="Welcome to M&E Financial Services" data-es="Bienvenido a M&E Servicios Financieros">Welcome to M&E Financial Services</h2>
+        <p style="color:var(--muted)" data-en="Managing finances doesn't have to be stressful. At M&E Financial Services, we provide personalized and reliable financial services to help individuals and businesses stay organized, compliant, and on track." data-es="Administrar finanzas no tiene que ser estresante. En M&E Servicios Financieros, proporcionamos servicios financieros personalizados y confiables para ayudar a individuos y negocios a mantenerse organizados, cumplir y estar en camino.">Managing finances doesn't have to be stressful. At M&E Financial Services, we provide personalized and reliable financial services to help individuals and businesses stay organized, compliant, and on track.</p>
+        <p style="color:var(--muted);margin-top:12px" data-en="From income and business taxes to bookkeeping and payroll management, we simplify the numbers so you can focus on what matters most—growing your business or enjoying life." data-es="Desde impuestos sobre la renta y negocios hasta contabilidad y gestión de nómina, simplificamos los números para que pueda enfocarse en lo que más importa: hacer crecer su negocio o disfrutar la vida.">From income and business taxes to bookkeeping and payroll management, we simplify the numbers so you can focus on what matters most—growing your business or enjoying life.</p>
+        <p style="color:var(--muted);margin-top:12px" data-en="We pride ourselves on accuracy, efficiency, and a personal touch. Whether you need help preparing your taxes, keeping your books in order, or managing payroll, we're here to make the process smooth and stress-free." data-es="Nos enorgullecemos de la precisión, eficiencia y un toque personal. Ya sea que necesite ayuda preparando sus impuestos, manteniendo sus libros en orden o administrando nómina, estamos aquí para hacer el proceso suave y sin estrés.">We pride ourselves on accuracy, efficiency, and a personal touch. Whether you need help preparing your taxes, keeping your books in order, or managing payroll, we're here to make the process smooth and stress-free.</p>
+      </div>
+
+      <div class="panel">
+        <h3 style="margin-bottom:12px" data-en="Ready to Get Started?" data-es="¿Listo para Comenzar?">Ready to Get Started?</h3>
+        <p style="color:var(--muted)" data-en="Let's work together to take the worry out of your finances. " data-es="Trabajemos juntos para eliminar la preocupación de sus finanzas. ">Let's work together to take the worry out of your finances. <a href="contact.html" style="color:#d4a574;text-decoration:none;font-weight:500" data-en="Contact us today" data-es="Contáctenos hoy">Contact us today</a> to get started!</p>
+      </div>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 Tax Solutions. All rights reserved.</p>
-      <p>Phone: (555) 123-4567 | Email: info@taxsolutions.com</p>
+      <p>&copy; 2025 M & E Finances. All rights reserved. | <span data-en="Se Habla Español" data-es="Se Habla Español">Se Habla Español</span></p>
+      <p>Phone: (555) 123-4567 | Email: info@mefinances.com</p>
     </div>
   </footer>
+
+  <script>
+    const langToggle = document.getElementById('langToggle');
+    let currentLang = localStorage.getItem('language') || 'en';
+
+    function initLanguage() {
+      if (currentLang === 'es') {
+        langToggle.classList.add('active');
+        langToggle.textContent = 'EN';
+        translatePage('es');
+      }
+    }
+
+    function translatePage(lang) {
+      // Translate page title
+      const titleEl = document.querySelector('title[data-en][data-es]');
+      if (titleEl) {
+        const newTitle = lang === 'es' ? titleEl.getAttribute('data-es') : titleEl.getAttribute('data-en');
+        titleEl.textContent = newTitle;
+        document.title = newTitle;
+      }
+      
+      const elements = document.querySelectorAll('[data-en][data-es]');
+      elements.forEach(el => {
+        if (lang === 'es') {
+          el.textContent = el.getAttribute('data-es');
+        } else {
+          el.textContent = el.getAttribute('data-en');
+        }
+      });
+    }
+
+    langToggle.addEventListener('click', function() {
+      currentLang = currentLang === 'en' ? 'es' : 'en';
+      localStorage.setItem('language', currentLang);
+      langToggle.classList.toggle('active');
+      langToggle.textContent = currentLang === 'es' ? 'EN' : 'ES';
+      translatePage(currentLang);
+    });
+
+    initLanguage();
+  </script>
 </body>
 </html>

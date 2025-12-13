@@ -3,81 +3,121 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services — Tax Solutions</title>
+  <title data-en="Services — M & E Finances" data-es="Servicios — M & E Finanzas">Services — M & E Finances</title>
   <style>
-    :root{--accent:#0a84ff;--accent-green:#216e4a;--page-bg:#f6f7f8;--brightness:0.92;--text:#0b1220;--muted:#394152}
+    :root{--accent:#d4a574;--accent-gold:#d4a574;--page-bg:#e8dcc8;--brightness:0.96;--text:#1a3a52;--muted:#5a6b78}
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--text);line-height:1.6;background:var(--page-bg);filter:brightness(var(--brightness))}
     .container{max-width:1100px;margin:0 auto;padding:28px}
-    header{background:#f0fbf5;padding:18px 0;border-bottom:1px solid rgba(33,110,74,0.12)}
-    .logo{font-weight:600}
-    nav ul{display:flex;gap:18px;list-style:none}
-    nav a{text-decoration:none;color:var(--text);font-weight:500}
-    nav a:hover{color:var(--accent)}
+    header{background:#1a3a52;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,0.1);color:#fff;margin-left:calc(-50vw + 50%);margin-right:calc(-50vw + 50%);width:100vw}
+    header > div{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto}
+    .logo{font-weight:600;font-size:1.4rem;color:#fff}
+    nav{display:flex;justify-content:flex-end;align-items:center;gap:24px}
+    nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+    nav a{text-decoration:none;color:#fff;font-weight:500}
+    nav a:hover{color:#d4a574}
     .hero{padding:56px 0 28px}
     h1{font-size:1.6rem;margin-bottom:8px}
     p.lead{color:var(--muted);max-width:800px}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:20px}
-    .card{background:#ffffff;padding:16px 18px;border-radius:10px;border:1px solid rgba(11,18,32,0.035);box-shadow:0 8px 22px rgba(8,15,25,0.03);border-top:4px solid rgba(33,110,74,0.12)}
+    .card{background:#ffffff;padding:16px 18px;border-radius:10px;border:1px solid rgba(26,58,82,0.05);box-shadow:0 8px 22px rgba(26,58,82,0.04);border-top:4px solid rgba(212,165,116,0.2)}
     .card h3{margin-bottom:8px;font-size:1rem}
-    footer{padding:36px 0;border-top:1px solid rgba(33,110,74,0.12);background:#f0fbf5;color:var(--text);text-align:center}
+    footer{padding:36px 0;border-top:4px solid #d4a574;background:#1a3a52;color:#fff;text-align:center;margin-left:-28px;margin-right:-28px;padding-left:28px;padding-right:28px}
+    .lang-toggle{background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.3);padding:0.4rem 0.8rem;border-radius:6px;cursor:pointer;font-size:0.85rem;font-weight:500;transition:background 0.2s}
+    .lang-toggle:hover{background:rgba(255,255,255,0.2)}
+    .lang-toggle.active{background:#d4a574}
   </style>
 </head>
 <body>
   <header>
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center">
-      <div class="logo">Tax Solutions</div>
+    <div>
+      <div class="logo">M & E Finances</div>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+          <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+          <li><a href="about.html" data-en="About" data-es="Acerca de">About</a></li>
+          <li><a href="testimonials.html" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
+          <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
         </ul>
+        <button class="lang-toggle" id="langToggle">ES</button>
       </nav>
     </div>
   </header>
 
   <main class="container">
     <section class="hero">
-      <h1>Our Services</h1>
-      <p class="lead">Comprehensive tax, bookkeeping, and advisory services tailored for individuals and businesses. We focus on clarity, compliance, and growth.</p>
+      <h1 data-en="Our Services" data-es="Nuestros Servicios">Our Services</h1>
+      <p class="lead" data-en="Comprehensive tax, bookkeeping, and advisory services tailored for individuals and businesses. We focus on clarity, compliance, and growth." data-es="Servicios integrales de impuestos, contabilidad y asesoramiento personalizados para individuos y negocios. Nos enfocamos en claridad, cumplimiento y crecimiento.">Comprehensive tax, bookkeeping, and advisory services tailored for individuals and businesses. We focus on clarity, compliance, and growth.</p>
     </section>
 
     <section class="grid" aria-label="services">
       <div class="card">
-        <h3>Tax Planning</h3>
-        <p>Strategic year-round tax planning focused on reducing liabilities and maximizing legal opportunities.</p>
+        <h3 data-en="Income & Business Taxes" data-es="Impuestos sobre la Renta y Negocios">Income & Business Taxes</h3>
+        <p data-en="Take the stress out of tax season! I handle both individual and business tax preparation, ensuring your returns are accurate, compliant, and optimized to save you money. From federal and state filings to business taxes for LLCs, corporations, and partnerships, I make sure you get the maximum benefit with minimal hassle." data-es="¡Elimine el estrés de la temporada de impuestos! Manejo la preparación de impuestos tanto individuales como empresariales, asegurando que sus declaraciones sean precisas, cumplan con las normas y estén optimizadas para ahorrarle dinero. Desde presentaciones fiscales federales y estatales hasta impuestos empresariales para LLCs, corporaciones y asociaciones, me aseguro de que obtenga el máximo beneficio con el mínimo inconveniente.">Take the stress out of tax season! I handle both individual and business tax preparation, ensuring your returns are accurate, compliant, and optimized to save you money. From federal and state filings to business taxes for LLCs, corporations, and partnerships, I make sure you get the maximum benefit with minimal hassle.</p>
       </div>
       <div class="card">
-        <h3>Business Taxes</h3>
-        <p>Preparation and filing for small businesses, corporations, and partnerships with optimized strategies.</p>
+        <h3 data-en="Bookkeeping" data-es="Contabilidad">Bookkeeping</h3>
+        <p data-en="Keep your finances organized and your business on track. I provide reliable bookkeeping services, including recording transactions, reconciling accounts, and generating clear financial statements. With up-to-date records, you'll always know where your business stands and be ready for tax season or business decisions." data-es="Mantenga sus finanzas organizadas y su negocio en camino. Proporciono servicios de contabilidad confiables, incluyendo registro de transacciones, reconciliación de cuentas y generación de estados financieros claros. Con registros actualizados, siempre sabrá dónde se encuentra su negocio y estará listo para la temporada de impuestos o decisiones empresariales.">Keep your finances organized and your business on track. I provide reliable bookkeeping services, including recording transactions, reconciling accounts, and generating clear financial statements. With up-to-date records, you'll always know where your business stands and be ready for tax season or business decisions.</p>
       </div>
       <div class="card">
-        <h3>Individual Returns</h3>
-        <p>Personal tax return preparation ensuring credits and deductions are accurately claimed.</p>
+        <h3 data-en="Payroll Management" data-es="Gestión de Nómina">Payroll Management</h3>
+        <p data-en="Pay your employees on time and stay compliant. I manage payroll processing, taxes, and recordkeeping, ensuring accuracy and compliance with federal and state regulations. Spend less time on administrative headaches and more time focusing on growing your business." data-es="Pague a sus empleados a tiempo y manténgase en cumplimiento. Manejo el procesamiento de nómina, impuestos y mantenimiento de registros, asegurando precisión y cumplimiento de las regulaciones federales y estatales. Dedique menos tiempo a dolores de cabeza administrativos y más tiempo a enfocar el crecimiento de su negocio.">Pay your employees on time and stay compliant. I manage payroll processing, taxes, and recordkeeping, ensuring accuracy and compliance with federal and state regulations. Spend less time on administrative headaches and more time focusing on growing your business.</p>
       </div>
       <div class="card">
-        <h3>Bookkeeping</h3>
-        <p>Clean, reliable bookkeeping to keep your finances audit-ready and decision-ready.</p>
-      </div>
-      <div class="card">
-        <h3>Real Estate Tax</h3>
-        <p>Specialized guidance for investors and property owners to optimize tax outcomes.</p>
-      </div>
-      <div class="card">
-        <h3>Audit Support</h3>
-        <p>Representation and professional support throughout audits and IRS reviews.</p>
+        <h3 data-en="Financial Planning/Budgeting" data-es="Planificación Financiera/Presupuestación">Financial Planning/Budgeting</h3>
+        <p data-en="Plan for success with strategic financial guidance. I work with you to create budgets, forecast cash flow, and develop financial strategies that align with your business goals. Whether you're starting out or scaling up, I help you make confident decisions with clear financial insights." data-es="Planifique el éxito con orientación financiera estratégica. Trabajo con usted para crear presupuestos, pronosticar flujo de efectivo y desarrollar estrategias financieras que se alineen con sus objetivos comerciales. Ya sea que esté comenzando o escalando, lo ayudo a tomar decisiones confiadas con información financiera clara.">Plan for success with strategic financial guidance. I work with you to create budgets, forecast cash flow, and develop financial strategies that align with your business goals. Whether you're starting out or scaling up, I help you make confident decisions with clear financial insights.</p>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 Tax Solutions. All rights reserved.</p>
-      <p>Phone: (555) 123-4567 | Email: info@taxsolutions.com</p>
+      <p>&copy; 2025 M & E Finances. All rights reserved. | <span data-en="Se Habla Español" data-es="Se Habla Español">Se Habla Español</span></p>
+      <p>Phone: (555) 123-4567 | Email: info@mefinances.com</p>
     </div>
   </footer>
+
+  <script>
+    const langToggle = document.getElementById('langToggle');
+    let currentLang = localStorage.getItem('language') || 'en';
+
+    function initLanguage() {
+      if (currentLang === 'es') {
+        langToggle.classList.add('active');
+        langToggle.textContent = 'EN';
+        translatePage('es');
+      }
+    }
+
+    function translatePage(lang) {
+      // Translate page title
+      const titleEl = document.querySelector('title[data-en][data-es]');
+      if (titleEl) {
+        const newTitle = lang === 'es' ? titleEl.getAttribute('data-es') : titleEl.getAttribute('data-en');
+        titleEl.textContent = newTitle;
+        document.title = newTitle;
+      }
+      
+      const elements = document.querySelectorAll('[data-en][data-es]');
+      elements.forEach(el => {
+        if (lang === 'es') {
+          el.textContent = el.getAttribute('data-es');
+        } else {
+          el.textContent = el.getAttribute('data-en');
+        }
+      });
+    }
+
+    langToggle.addEventListener('click', function() {
+      currentLang = currentLang === 'en' ? 'es' : 'en';
+      localStorage.setItem('language', currentLang);
+      langToggle.classList.toggle('active');
+      langToggle.textContent = currentLang === 'es' ? 'EN' : 'ES';
+      translatePage(currentLang);
+    });
+
+    initLanguage();
+  </script>
 </body>
 </html>

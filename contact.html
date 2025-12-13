@@ -3,64 +3,122 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact — Tax Solutions</title>
+  <title data-en="Contact — M & E Finances" data-es="Contáctenos — M & E Finanzas">Contact — M & E Finances</title>
   <style>
-    :root{--accent:#0a84ff;--accent-green:#216e4a;--page-bg:#f6f7f8;--brightness:0.92;--text:#0b1220;--muted:#394152}
+    :root{--accent:#d4a574;--accent-gold:#d4a574;--page-bg:#e8dcc8;--brightness:0.96;--text:#1a3a52;--muted:#5a6b78}
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--text);line-height:1.6;background:var(--page-bg);filter:brightness(var(--brightness))}
     .container{max-width:720px;margin:0 auto;padding:28px}
-    header{background:#f0fbf5;padding:18px 0;border-bottom:1px solid rgba(33,110,74,0.12)}
-    .logo{font-weight:600}
-    nav ul{display:flex;gap:18px;list-style:none}
-    nav a{text-decoration:none;color:var(--text);font-weight:500}
-    nav a:hover{color:var(--accent)}
+    header{background:#1a3a52;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,0.1);color:#fff;margin-left:calc(-50vw + 50%);margin-right:calc(-50vw + 50%);width:100vw}
+    header > div{display:flex;justify-content:space-between;align-items:center;max-width:720px;margin:0 auto}
+    .logo{font-weight:600;font-size:1.4rem;color:#fff}
+    nav{display:flex;justify-content:flex-end;align-items:center;gap:24px}
+    nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+    nav a{text-decoration:none;color:#fff;font-weight:500}
+    nav a:hover{color:#d4a574}
     .hero{padding:48px 0 8px}
     h1{font-size:1.6rem;margin-bottom:8px}
     .lead{color:var(--muted)}
     form{display:grid;gap:12px;margin-top:18px}
-    input,textarea{padding:12px;border:1px solid rgba(11,18,32,0.06);border-radius:8px;font-size:1rem}
-    button{background:var(--accent-green);color:#fff;padding:10px 14px;border-radius:10px;border:none;font-weight:600;box-shadow:0 6px 18px rgba(33,110,74,0.06)}
-    footer{padding:36px 0;border-top:1px solid rgba(33,110,74,0.12);background:#f0fbf5;color:var(--text);text-align:center}
+    input,textarea{padding:12px;border:1px solid rgba(26,58,82,0.08);border-radius:8px;font-size:1rem}
+    button{background:var(--accent-gold);color:#fff;padding:10px 14px;border-radius:10px;border:none;font-weight:600;box-shadow:0 6px 18px rgba(212,165,116,0.08)}
+    footer{padding:36px 0;border-top:4px solid #d4a574;background:#1a3a52;color:#fff;text-align:center;margin-left:-28px;margin-right:-28px;padding-left:28px;padding-right:28px}
+    .lang-toggle{background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.3);padding:0.4rem 0.8rem;border-radius:6px;cursor:pointer;font-size:0.85rem;font-weight:500;transition:background 0.2s}
+    .lang-toggle:hover{background:rgba(255,255,255,0.2)}
+    .lang-toggle.active{background:#d4a574}
   </style>
 </head>
 <body>
   <header>
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center">
-      <div class="logo">Tax Solutions</div>
+    <div>
+      <div class="logo">M & E Finances</div>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+          <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+          <li><a href="about.html" data-en="About" data-es="Acerca de">About</a></li>
+          <li><a href="testimonials.html" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
+          <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
         </ul>
+        <button class="lang-toggle" id="langToggle">ES</button>
       </nav>
     </div>
   </header>
 
   <main class="container">
     <section class="hero">
-      <h1>Contact Us</h1>
-      <p class="lead">Have a question or need help? Send us a message and we'll get back within 1-2 business days.</p>
+      <h1 data-en="Contact Us" data-es="Contáctenos">Contact Us</h1>
+      <p class="lead" data-en="Have a question or need help? Send us a message and we'll get back within 1-2 business days." data-es="¿Tiene una pregunta o necesita ayuda? Envíenos un mensaje y nos comunicaremos en 1-2 días hábiles.">Have a question or need help? Send us a message and we'll get back within 1-2 business days.</p>
     </section>
 
     <section>
-      <form action="mailto:info@taxsolutions.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your name" required>
-        <input type="email" name="email" placeholder="Your email" required>
-        <input type="text" name="subject" placeholder="Subject">
-        <textarea name="message" placeholder="Your message" rows="6" required></textarea>
-        <button type="submit">Send Message</button>
+      <form action="mailto:info@mefinances.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your name" data-en-placeholder="Your name" data-es-placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Your email" data-en-placeholder="Your email" data-es-placeholder="Tu correo electrónico" required>
+        <input type="text" name="subject" placeholder="Subject" data-en-placeholder="Subject" data-es-placeholder="Asunto">
+        <textarea name="message" placeholder="Your message" data-en-placeholder="Your message" data-es-placeholder="Tu mensaje" rows="6" required></textarea>
+        <button type="submit" data-en="Send Message" data-es="Enviar Mensaje">Send Message</button>
       </form>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 Tax Solutions. All rights reserved.</p>
-      <p>Phone: (555) 123-4567 | Email: info@taxsolutions.com</p>
+      <p>&copy; 2025 M & E Finances. All rights reserved. | <span data-en="Se Habla Español" data-es="Se Habla Español">Se Habla Español</span></p>
+      <p>Phone: (555) 123-4567 | Email: info@mefinances.com</p>
     </div>
   </footer>
+
+  <script>
+    const langToggle = document.getElementById('langToggle');
+    let currentLang = localStorage.getItem('language') || 'en';
+
+    function initLanguage() {
+      if (currentLang === 'es') {
+        langToggle.classList.add('active');
+        langToggle.textContent = 'EN';
+        translatePage('es');
+      }
+    }
+
+    function translatePage(lang) {
+      // Translate page title
+      const titleEl = document.querySelector('title[data-en][data-es]');
+      if (titleEl) {
+        const newTitle = lang === 'es' ? titleEl.getAttribute('data-es') : titleEl.getAttribute('data-en');
+        titleEl.textContent = newTitle;
+        document.title = newTitle;
+      }
+      
+      const elements = document.querySelectorAll('[data-en][data-es]');
+      elements.forEach(el => {
+        if (lang === 'es') {
+          el.textContent = el.getAttribute('data-es');
+        } else {
+          el.textContent = el.getAttribute('data-en');
+        }
+      });
+      
+      // Handle form placeholders
+      const inputsWithPlaceholders = document.querySelectorAll('[data-en-placeholder][data-es-placeholder]');
+      inputsWithPlaceholders.forEach(el => {
+        if (lang === 'es') {
+          el.placeholder = el.getAttribute('data-es-placeholder');
+        } else {
+          el.placeholder = el.getAttribute('data-en-placeholder');
+        }
+      });
+    }
+
+    langToggle.addEventListener('click', function() {
+      currentLang = currentLang === 'en' ? 'es' : 'en';
+      localStorage.setItem('language', currentLang);
+      langToggle.classList.toggle('active');
+      langToggle.textContent = currentLang === 'es' ? 'EN' : 'ES';
+      translatePage(currentLang);
+    });
+
+    initLanguage();
+  </script>
 </body>
 </html>

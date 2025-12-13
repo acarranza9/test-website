@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tax Solutions - Professional Tax Services</title>
+    <title data-en="Stress-Free Financial Services - M & E Finances" data-es="Servicios Financieros Sin Estrés - M & E Finanzas">Stress-Free Financial Services - M & E Finances</title>
     <style>
         :root{
-            --accent: #0a84ff;
-            --accent-green: #216e4a;
-            --page-bg: #f3f4f5;
-            --brightness: 0.94;
-            --text: #0b1220;
-            --muted: #55606a;
+            --accent: #d4a574;
+            --accent-gold: #d4a574;
+            --page-bg: #e8dcc8;
+            --brightness: 0.96;
+            --text: #1a3a52;
+            --muted: #5a6b78
         }
 
         *{box-sizing:border-box;margin:0;padding:0}
@@ -23,42 +23,50 @@
 
         .container{max-width:1200px;margin:0 auto;padding:0 20px}
 
-        header{background:#eef6f0;padding:18px 0;border-bottom:1px solid rgba(33,110,74,0.08)}
+        header{background:#1a3a52;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,0.1);color:#fff;margin-left:calc(-50vw + 50%);margin-right:calc(-50vw + 50%);width:100vw}
+        header > div{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto}
 
         /* keep same header structure as other pages */
-        .logo{font-weight:600;font-size:1rem}
+        .logo{font-weight:600;font-size:1.4rem;color:#fff}
 
-        nav{display:flex;justify-content:space-between;align-items:center}
-        nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;align-items:center}
-        nav a{text-decoration:none;color:var(--text);font-weight:500}
-        nav a:hover{color:var(--accent)}
+        nav{display:flex;justify-content:flex-end;align-items:center;gap:24px}
+        nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;align-items:center}
+        nav a{text-decoration:none;color:#fff;font-weight:500}
+        nav a:hover{color:#d4a574}
 
         .hero{background:transparent;color:var(--text);padding:6rem 0 4rem 0;text-align:center}
-        .hero h1{font-size:2.4rem;margin-bottom:0.6rem;font-weight:600}
+        .hero h1{font-size:clamp(1.6rem,5vw,2.4rem);margin-bottom:0.6rem;font-weight:600;line-height:1.2}
         .hero p{color:var(--muted);max-width:820px;margin:0 auto 1.4rem}
 
         .btn{display:inline-block;padding:0.6rem 1.2rem;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;border:none}
-        .btn-green{background:var(--accent-green);box-shadow:0 6px 18px rgba(33,110,74,0.06);}
+        .btn-gold{background:var(--accent-gold);box-shadow:0 6px 18px rgba(212,165,116,0.08);}
 
         section{padding:3.5rem 0}
 
         .section-title{text-align:center;font-size:1.6rem;margin-bottom:1.6rem;color:var(--text);font-weight:600}
 
-        .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-        .service-card{background:#fff;padding:16px;border-radius:10px;border:1px solid rgba(11,18,32,0.04);box-shadow:0 8px 26px rgba(8,15,25,0.03);border-top:4px solid rgba(33,110,74,0.12)}
-        .service-card h3{font-size:1.05rem;margin-bottom:8px}
-        .service-card p{color:var(--muted)}
+        .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+        .service-card{background:#fff;padding:24px;border-radius:10px;border:1px solid rgba(26,58,82,0.05);box-shadow:0 8px 26px rgba(26,58,82,0.04);border-top:4px solid rgba(212,165,116,0.2);text-decoration:none;color:inherit;transition:transform 0.2s,box-shadow 0.2s}
+        .service-card:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(26,58,82,0.08)}
+        .service-icon{font-size:2.4rem;margin-bottom:12px;display:block}
+        .service-card h3{font-size:1.1rem;margin-bottom:4px;font-weight:600}
+        .service-card .subtitle{font-size:0.9rem;color:#d4a574;font-weight:500;margin-bottom:12px}
+        .service-card p{color:var(--muted);font-size:0.95rem;line-height:1.5}
 
         .about-content{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
-        .about-image{height:240px;border-radius:10px;background:linear-gradient(135deg,#e9eefc,#f6f9ff);border:1px solid rgba(11,18,32,0.03)}
+        .about-image{height:240px;border-radius:10px;background:linear-gradient(135deg,#f5f1e8,#faf7f1);border:1px solid rgba(26,58,82,0.08)}
 
         .testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-        .testimonial-card{background:#fff;padding:16px;border-radius:10px;border:1px solid rgba(11,18,32,0.03);box-shadow:0 8px 22px rgba(8,15,25,0.03);border-top:4px solid rgba(33,110,74,0.12)}
+        .testimonial-card{background:#fff;padding:16px;border-radius:10px;border:1px solid rgba(26,58,82,0.05);box-shadow:0 8px 22px rgba(26,58,82,0.04);border-top:4px solid rgba(212,165,116,0.2)}
 
         .contact-form{max-width:640px;margin:0 auto;display:grid;gap:12px}
         .contact-form input,.contact-form textarea{padding:12px;border:1px solid rgba(11,18,32,0.06);border-radius:8px}
 
-        footer{padding:24px 0;background:#eef6f0;border-top:1px solid rgba(33,110,74,0.08);color:var(--text);text-align:center}
+        footer{padding:24px 0;background:#1a3a52;border-top:4px solid #d4a574;color:#fff;text-align:center;margin-left:-20px;margin-right:-20px;padding-left:20px;padding-right:20px}
+
+        .lang-toggle{background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.3);padding:0.4rem 0.8rem;border-radius:6px;cursor:pointer;font-size:0.85rem;font-weight:500;transition:background 0.2s}
+        .lang-toggle:hover{background:rgba(255,255,255,0.2)}
+        .lang-toggle.active{background:#d4a574}
 
         @media (max-width:768px){
             .container{padding:0 16px}
@@ -72,47 +80,53 @@
 <body>
     <!-- Header/Navigation -->
     <header>
-        <nav class="container">
-            <div class="logo">Tax Solutions</div>
-            <ul>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div>
+            <div class="logo">M & E Finances</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+                    <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+                    <li><a href="about.html" data-en="About" data-es="Acerca de">About</a></li>
+                    <li><a href="testimonials.html" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
+                    <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+                </ul>
+                <button class="lang-toggle" id="langToggle">ES</button>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Expert Tax Solutions for Your Business</h1>
-            <p>Maximize your returns and minimize your tax burden with our experienced team</p>
-            <a href="services.html" class="btn">Explore Services</a>
-            <a href="contact.html" class="btn btn-green">Contact Us</a>
+            <h1 data-en="Stress-Free Tax & Financial Services for Local Families and Small Businesses" data-es="Servicios Fiscales y Financieros sin Estrés para Familias Locales y Pequeños Negocios">Stress-Free Tax & Financial Services for Local Families and Small Businesses</h1>
+            <p data-en="Your Partner in Taxes, Bookkeeping, and Payroll." data-es="Su Socio en Impuestos, Contabilidad y Nómina.">Your Partner in Taxes, Bookkeeping, and Payroll.</p>
+            <a href="services.html" class="btn" data-en="Explore Services" data-es="Explorar Servicios">Explore Services</a>
+            <a href="contact.html" class="btn btn-green" data-en="Contact Us" data-es="Contáctenos">Contact Us</a>
         </div>
     </section>
 
     <!-- Highlights (short links to dedicated pages) -->
     <section class="services">
         <div class="container">
-            <h2 class="section-title">How We Help</h2>
+            <h2 class="section-title" data-en="How We Help" data-es="Cómo Ayudamos">How We Help</h2>
             <div class="services-grid">
                 <a class="service-card" href="services.html">
-                    <h3>Full-Service Tax & Accounting</h3>
-                    <p>View our services for individuals and businesses — tax planning, filings, bookkeeping, and audit support.</p>
+                    <span class="service-icon">📊</span>
+                    <h3 data-en="Income & Business Taxes" data-es="Impuestos sobre la Renta y Negocios">Income & Business Taxes</h3>
+                    <div class="subtitle" data-en="Maximize Refunds, Minimize Stress." data-es="Maximizar Reembolsos, Minimizar Estrés.">Maximize Refunds, Minimize Stress.</div>
+                    <p data-en="Quick, accurate, and optimized tax preparation for individuals and businesses." data-es="Preparación de impuestos rápida, precisa y optimizada para personas y negocios.">Quick, accurate, and optimized tax preparation for individuals and businesses.</p>
                 </a>
-                <a class="service-card" href="about.html">
-                    <h3>About Our Team</h3>
-                    <p>Learn about our credentials, experience, and how we approach tax strategy with clarity and care.</p>
+                <a class="service-card" href="services.html">
+                    <span class="service-icon">📋</span>
+                    <h3 data-en="Bookkeeping" data-es="Contabilidad">Bookkeeping</h3>
+                    <div class="subtitle" data-en="Organized Records, Clear Decisions." data-es="Registros Organizados, Decisiones Claras.">Organized Records, Clear Decisions.</div>
+                    <p data-en="Stay on top of your finances with precise bookkeeping and up-to-date financial statements." data-es="Mantenga el control de sus finanzas con contabilidad precisa y estados financieros actualizados.">Stay on top of your finances with precise bookkeeping and up-to-date financial statements.</p>
                 </a>
-                <a class="service-card" href="testimonials.html">
-                    <h3>Client Results</h3>
-                    <p>Read client stories and see how we've helped businesses and individuals optimize their taxes.</p>
-                </a>
-                <a class="service-card" href="contact.html">
-                    <h3>Get in Touch</h3>
-                    <p>Contact us to schedule a consultation or ask a question — quick response within 1-2 business days.</p>
+                <a class="service-card" href="services.html">
+                    <span class="service-icon">💰</span>
+                    <h3 data-en="Payroll Management" data-es="Gestión de Nómina">Payroll Management</h3>
+                    <div class="subtitle" data-en="Pay Employees Right, Every Time." data-es="Pague a los Empleados Correctamente, Siempre.">Pay Employees Right, Every Time.</div>
+                    <p data-en="Reliable payroll processing, tax filings, and recordkeeping so you can focus on your business." data-es="Procesamiento confiable de nómina, presentación de impuestos y mantenimiento de registros para que pueda concentrarse en su negocio.">Reliable payroll processing, tax filings, and recordkeeping so you can focus on your business.</p>
                 </a>
             </div>
         </div>
@@ -121,9 +135,56 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Tax Solutions. All rights reserved.</p>
-            <p>Phone: (555) 123-4567 | Email: info@Taxsolutions.com</p>
+            <p>&copy; 2025 M & E Finances. All rights reserved. | <span data-en="Se Habla Español" data-es="Se Habla Español">Se Habla Español</span></p>
+            <p>Phone: (555) 123-4567 | Email: info@mefinances.com</p>
         </div>
     </footer>
-</body>
-</html>
+
+    <script>
+        const langToggle = document.getElementById('langToggle');
+        let currentLang = localStorage.getItem('language') || 'en';
+
+        // Initialize language on page load
+        function initLanguage() {
+            if (currentLang === 'es') {
+                langToggle.classList.add('active');
+                langToggle.textContent = 'EN';
+                translatePage('es');
+            }
+        }
+
+        // Translate page content
+        function translatePage(lang) {
+            // Translate page title
+            const titleEl = document.querySelector('title[data-en][data-es]');
+            if (titleEl) {
+                const newTitle = lang === 'es' ? titleEl.getAttribute('data-es') : titleEl.getAttribute('data-en');
+                titleEl.textContent = newTitle;
+                document.title = newTitle;
+            }
+            
+            const elements = document.querySelectorAll('[data-en][data-es]');
+            elements.forEach(el => {
+                if (lang === 'es') {
+                    el.textContent = el.getAttribute('data-es');
+                } else {
+                    el.textContent = el.getAttribute('data-en');
+                }
+            });
+        }
+
+        // Toggle language
+        langToggle.addEventListener('click', function() {
+            currentLang = currentLang === 'en' ? 'es' : 'en';
+            localStorage.setItem('language', currentLang);
+            
+            langToggle.classList.toggle('active');
+            langToggle.textContent = currentLang === 'es' ? 'EN' : 'ES';
+            
+            translatePage(currentLang);
+        });
+
+        // Initialize on page load
+        initLanguage();
+    </script>
+
